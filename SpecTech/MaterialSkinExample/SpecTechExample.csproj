@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47409AA5-62AE-4189-8E83-C471502DF5E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaterialSkinExample</RootNamespace>
+    <AssemblyName>MaterialSkinExample</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CreateDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateDiscount.Designer.cs">
+      <DependentUpon>CreateDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateRep.Designer.cs">
+      <DependentUpon>CreateRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailPost2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailPost2.Designer.cs">
+      <DependentUpon>DetailPost2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateType.Designer.cs">
+      <DependentUpon>CreateType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Absence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Absence.Designer.cs">
+      <DependentUpon>CreateUser_Absence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Education.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Education.Designer.cs">
+      <DependentUpon>CreateUser_Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Pay.Designer.cs">
+      <DependentUpon>CreateUser_Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Prize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateUser_Prize.Designer.cs">
+      <DependentUpon>CreateUser_Prize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreatePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreatePost.Designer.cs">
+      <DependentUpon>CreatePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateLeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateLeas.Designer.cs">
+      <DependentUpon>CreateLeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailLeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailLeas.Designer.cs">
+      <DependentUpon>DetailLeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailUser.Designer.cs">
+      <DependentUpon>DetailUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailUser_All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailUser_All.Designer.cs">
+      <DependentUpon>DetailUser_All.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateCharact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateCharact.Designer.cs">
+      <DependentUpon>CreateCharact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTech.Designer.cs">
+      <DependentUpon>CreateTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBF.cs" />
+    <Compile Include="DBF_Leas.cs" />
+    <Compile Include="DBF_Tech.cs" />
+    <Compile Include="DBF_Users.cs" />
+    <Compile Include="Forms\DetailPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailPost.Designer.cs">
+      <DependentUpon>DetailPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailTech.Designer.cs">
+      <DependentUpon>DetailTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailType.Designer.cs">
+      <DependentUpon>DetailType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JoinTechToLeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JoinTechToLeas.Designer.cs">
+      <DependentUpon>JoinTechToLeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\SetConnectionString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetConnectionString.Designer.cs">
+      <DependentUpon>SetConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stat.cs" />
+    <EmbeddedResource Include="Forms\CreateDiscount.resx">
+      <DependentUpon>CreateDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateRep.resx">
+      <DependentUpon>CreateRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailPost2.resx">
+      <DependentUpon>DetailPost2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateType.resx">
+      <DependentUpon>CreateType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailLeas.resx">
+      <DependentUpon>DetailLeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateUser_Absence.resx">
+      <DependentUpon>CreateUser_Absence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateUser_Education.resx">
+      <DependentUpon>CreateUser_Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateUser_Pay.resx">
+      <DependentUpon>CreateUser_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateUser_Prize.resx">
+      <DependentUpon>CreateUser_Prize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreatePost.resx">
+      <DependentUpon>CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateLeas.resx">
+      <DependentUpon>CreateLeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailUser.resx">
+      <DependentUpon>DetailUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailUser_All.resx">
+      <DependentUpon>DetailUser_All.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateCharact.resx">
+      <DependentUpon>CreateCharact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTech.resx">
+      <DependentUpon>CreateTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailPost.resx">
+      <DependentUpon>DetailPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailTech.resx">
+      <DependentUpon>DetailTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DetailType.resx">
+      <DependentUpon>DetailType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JoinTechToLeas.resx">
+      <DependentUpon>JoinTechToLeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\SetConnectionString.resx">
+      <DependentUpon>SetConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{8eb7611b-68cd-4b8b-987a-11717e2b250c}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\SpecTech.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
